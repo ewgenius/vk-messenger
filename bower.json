@@ -1,0 +1,22 @@
+{
+  "name": "vk-messenger",
+  "version": "0.0.0",
+  "authors": [
+    "ewgeniux <ewgeniux@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~0.9.2",
+    "paper-elements": "polymerelements/paper-elements#~0.9.1",
+    "iron-elements": "polymerelements/iron-elements#~0.9.1",
+    "pouchdb": "~3.5.0",
+    "bluebird": "~2.9.26"
+  }
+}

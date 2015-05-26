@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+:host {
+
+}
+paper-drawer-panel {
+  #drawer {
+    background-color: white;
+
+    paper-toolbar {
+      background-color: $color-primary-normal;
+    }
+  }
+
+  #main {
+    background-color: $color-bg-normal;
+
+    paper-toolbar {
+      background-color: $color-primary-normal;
+    }
+  }
+}
