@@ -3,9 +3,10 @@ link(rel="import", href="../../../bower_components/polymer/polymer.html")
 dom-module#vk-app
   link(rel="stylesheet", href="./vk-app.css")
   template
-    paper-drawer-panel(drawer-width="320px", responsive-width="720px")
-      paper-header-panel(drawer)
+    paper-drawer-panel#navDrawerPanel(responsive-width="1920px")
+      paper-header-panel.nav(drawer)
         paper-toolbar
+<<<<<<< HEAD
       paper-header-panel(main)
         paper-toolbar
           paper-icon-button(icon="menu", paper-drawer-toggle)
@@ -14,5 +15,25 @@ dom-module#vk-app
         .content
           
           
+=======
+      
+      paper-drawer-panel.main-drawer-panel#mainDrawerPanel(main, responsive-width="720px", drawer-toggle-attribute="list-toggle", narrow="{{_isMobile}}", drawer-width="[[_computeListWidth(_isMobile)]]")
+        paper-header-panel(drawer)
+          paper-toolbar
+            paper-icon-button(icon="menu", paper-drawer-toggle)
+            
+          paper-menu.list(on-iron-activate="_listTap")
+            paper-item
+            paper-item
+            paper-item
+            paper-item
+            paper-item
+            paper-item
+        paper-header-panel(main)
+          paper-toolbar
+            paper-icon-button(icon="arrow-back", list-toggle)
+            span(title) Test
+            paper-icon-button(icon="more-vert")
+>>>>>>> 982f557ffc9aa4a2a851e92a4987d952b762ffc0
 script(src="./vk-app.js")
   
