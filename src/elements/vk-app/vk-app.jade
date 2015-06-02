@@ -7,9 +7,10 @@ dom-module#vk-app
       paper-header-panel.nav(drawer)
         paper-toolbar
       
-      paper-drawer-panel#mainDrawerPanel(main, responsive-width="720px", drawer-toggle-attribute="list-toggle", narrow="{{_isMobile}}", drawer-width="[[_computeListWidth(_isMobile)]]")
+      paper-drawer-panel.main-drawer-panel#mainDrawerPanel(main, responsive-width="720px", drawer-toggle-attribute="list-toggle", narrow="{{_isMobile}}", drawer-width="[[_computeListWidth(_isMobile)]]")
         paper-header-panel(drawer)
           paper-toolbar
+            paper-icon-button(icon="menu", paper-drawer-toggle)
             
           paper-menu.list(on-iron-activate="_listTap")
             paper-item

@@ -2,6 +2,11 @@
 :host {
 
 }
+
+.main-drawer-panel:not([narrow]) [list-toggle] {
+  display: none;
+}
+
 paper-drawer-panel {
   #drawer {
     background-color: white;
