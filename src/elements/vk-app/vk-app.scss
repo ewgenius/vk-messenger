@@ -7,12 +7,50 @@
   display: none;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #cbcbcb;
+  outline: none;
+}
+
+paper-header-panel.nav {
+  paper-menu {
+    paper-item {
+      iron-icon {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
 paper-drawer-panel {
   #drawer {
     background-color: white;
 
     paper-toolbar {
       background-color: $color-primary-normal;
+    }
+
+    paper-menu {
+      paper-item {
+        .avatar {
+          width: 40px;
+          height: 40px;
+          margin: 16px 16px 16px 0;
+          border-radius: 50%;
+        }
+        paper-item-body {
+          [secondary] {
+            font-weight: 400;
+          }
+        }
+      }
     }
   }
 
@@ -24,6 +62,6 @@ paper-drawer-panel {
     }
   }
   .content {
-    padding: 16px;
+    //padding: 16px;
   }
 }

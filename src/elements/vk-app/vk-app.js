@@ -11,7 +11,11 @@ Polymer({
     this.$.mainDrawerPanel.closeDrawer();
   },
 
-  ready: function() {
+  properties: {
+  },
 
+  ready: function() {
+    var app = this;
+    app.dialogs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
   }
 });

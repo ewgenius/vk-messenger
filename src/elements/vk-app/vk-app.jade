@@ -6,34 +6,29 @@ dom-module#vk-app
     paper-drawer-panel#navDrawerPanel(responsive-width="1920px")
       paper-header-panel.nav(drawer)
         paper-toolbar
-<<<<<<< HEAD
-      paper-header-panel(main)
-        paper-toolbar
-          paper-icon-button(icon="menu", paper-drawer-toggle)
-          span(title) Test
-          paper-icon-button(icon="more-vert")
-        .content
-          
-          
-=======
+        paper-menu
+          paper-item
+            iron-icon(icon="settings")
+            paper-item-body чат
+          paper-item
+            iron-icon(icon="accounts")
+            paper-item-body 
       
       paper-drawer-panel.main-drawer-panel#mainDrawerPanel(main, responsive-width="720px", drawer-toggle-attribute="list-toggle", narrow="{{_isMobile}}", drawer-width="[[_computeListWidth(_isMobile)]]")
         paper-header-panel(drawer)
           paper-toolbar
             paper-icon-button(icon="menu", paper-drawer-toggle)
-            
           paper-menu.list(on-iron-activate="_listTap")
-            paper-item
-            paper-item
-            paper-item
-            paper-item
-            paper-item
-            paper-item
+            template(is="dom-repeat" items="{{dialogs}}")
+              paper-item
+                iron-image.avatar(src="http://lorempixel.com/400/400")
+                paper-item-body
+                  div.name test
+                  div.message(secondary) test
         paper-header-panel(main)
           paper-toolbar
             paper-icon-button(icon="arrow-back", list-toggle)
             span(title) Test
             paper-icon-button(icon="more-vert")
->>>>>>> 982f557ffc9aa4a2a851e92a4987d952b762ffc0
 script(src="./vk-app.js")
   
