@@ -1,0 +1,9 @@
+dom-module#chat-shell
+  template
+    iron-pages.fit(attr-for-selected="state", selected="{{state}}")
+      section(state="login")
+        webview#webview.fit(src="{{link}}")
+      section(state="chat")
+        vk-app.fit
+script(src="./chat-shell.js")
+  

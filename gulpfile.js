@@ -1,10 +1,24 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
 var sass = require('gulp-sass');
+var vulcanize = require('gulp-vulcanize');
+var crisper = require('gulp-crisper');
 
 gulp.task('jade', function() {
   gulp.src(['./src/*.jade', './src/**/*.jade'])
     .pipe(jade())
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('vulcanize', function() {
+  return gulp.src('./dist/index.html')
+    .pipe(vulcanize({
+      abspath: '',
+      excludes: [],
+      stripExcludes: false,
+      inlineScripts: false
+    }))
+    .pipe(crisper())
     .pipe(gulp.dest('./dist'));
 });
 
