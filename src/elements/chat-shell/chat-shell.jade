@@ -1,9 +1,20 @@
 dom-module#chat-shell
   template
-    iron-pages.fit(attr-for-selected="state", selected="{{state}}")
-      section(state="login")
-        webview#webview.fit(src="{{link}}")
-      section(state="chat")
-        vk-app.fit
+    paper-drawer-panel#navDrawerPanel(responsive-width="1920px")
+      paper-header-panel.nav(drawer)
+        paper-toolbar
+        paper-menu(attr-for-selected="state", selected="{{state}}")
+          paper-item(state="login")
+            iron-icon(icon="settings")
+            paper-item-body авторизация
+          paper-item(state="chat")
+            iron-icon(icon="face")
+            paper-item-body чат
+    
+      iron-pages.fit(main, attr-for-selected="state", selected="{{state}}")
+        section(state="login")
+          webview#webview.fit(src="{{link}}")
+        section(state="chat")
+          vk-app.fit
 script(src="./chat-shell.js")
   
